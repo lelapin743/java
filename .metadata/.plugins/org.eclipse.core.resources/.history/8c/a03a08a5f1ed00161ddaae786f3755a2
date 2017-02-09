@@ -1,0 +1,76 @@
+package PerfectMinesweeper ;
+
+public class Cell {
+	//Définition de caracts
+	
+	private static int nbCells; //attribut de classe
+	
+	private boolean bomb; //attribut d'instance
+	private int bombCount; // comprit entre 0 et 8
+	private Cell[] neighbours = new Cell[8];
+	
+	
+	static {
+		nbCells = 0;
+	}
+	
+	public Cell(){
+		this.bomb=false;
+		this.bombCount=-1;
+
+	}
+	
+	public Cell(boolean bomb, int bombCount) { //constructor
+		this.bomb=bomb;
+		this.bombCount=bombCount;
+		nbCells++;
+		
+	}
+	
+	boolean getbomb() {
+		return this.bomb;
+	}
+	int getbombCount() {
+		return this.bombCount;
+	}
+	void setbomb(boolean bomb) {
+		this.bomb=bomb;
+		
+		//Code to be used on a global bomb counter thing, but that should be counted in the map
+		/*if (bomb && (!this.bomb)) {
+			bombCount++;
+		}
+		else if (!bomb && (this.bomb)) {
+			bombCount--;
+		}*/
+		//Testing syntax on  Condition ? ifTrue : ifFalse
+		/*boolean test = false;
+		test = bomb ? false: true;
+		System.out.println(test);*/
+	}
+	/*void setbombCount(int bombCount) {
+		this.bombCount=bombCount;
+	}*/
+	
+	/**Ceci permet d'avoir de la documentation*/
+	void initialiser(boolean bomb, int bombCount) {
+		this.bomb = bomb;
+		this.bombCount = bombCount;
+	}
+	
+	
+	public void destroy() {
+		//this.finalize();
+		nbCells--;
+	}
+	//methode de classe
+	/*public static Cell noInfo(){
+		
+		.bomb=false;
+		.bombCount = 0;
+		return this;
+	}*/
+	public String toString() {
+		return (""+this.bomb);
+	}
+}

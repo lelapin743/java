@@ -1,0 +1,7 @@
+
+public class cellule {
+	//Définition de caracts
+	
+	private static int nbCellules;
+	
+}

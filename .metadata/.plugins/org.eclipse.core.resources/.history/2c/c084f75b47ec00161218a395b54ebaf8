@@ -1,0 +1,32 @@
+
+public class Cellule {
+	//Définition de caracts
+	
+	private static int nbCellules; //attribut de classe
+	
+	private boolean bomb; //attribut d'instance
+	private int bombCount; // comprit entre 0 et 8
+	
+	static {
+		nbCellules = 0;
+	}
+	
+	boolean getbomb() {
+		return this.bomb;
+	}
+	int getbombCount() {
+		return this.bombCount;
+	}
+	
+	/**Ceci permet d'avoir de la documentation*/
+	void initialiser(boolean bomb, int bombCount) {
+		this.bomb = bomb;
+		this.bombCount = bombCount;
+	}
+	
+	public Cellule(boolean bomb, int bombCount) {
+		this.bomb=bomb;
+		this.bombCount=bombCount;
+	}
+	
+}

@@ -1,0 +1,10 @@
+package PerfectMinesweeper ;
+
+public class MinesweeperMap {
+	
+	
+	
+	MinesweeperMap(){
+		
+	}
+}

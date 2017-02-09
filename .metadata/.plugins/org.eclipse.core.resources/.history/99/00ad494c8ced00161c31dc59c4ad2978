@@ -1,0 +1,8 @@
+package PerfectMinesweeper ;
+
+public class MinesweeperGame {
+	public static void main(String[] args){
+		System.out.println("MinesweeperGame wants to use other classes");
+		int a =4;
+	}
+}

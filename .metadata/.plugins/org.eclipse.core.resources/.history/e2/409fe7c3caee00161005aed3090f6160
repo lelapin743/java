@@ -1,0 +1,11 @@
+package PerfectMinesweeper ;
+
+public class MinesweeperMap {
+	Cell[][] map;
+	
+	
+	
+	MinesweeperMap(){
+		
+	}
+}
